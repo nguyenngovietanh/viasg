@@ -307,6 +307,9 @@ nav .navbar .links li:hover > i,
   color: #DA291C;
   background: rgb(0, 0, 0, 0.8);
 }
+.popular-story-image__details:hover .popular-story-image__title a {
+  color: #DA291C;
+}
 .popular-story-image img {
   width: 96%;
   height: 230px;
@@ -466,6 +469,14 @@ footer {
 }
 .about-us-col:nth-child(2), .about-us-col:last-child {
   padding-left: 45px;
+}
+.popular-story-image__title a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.475s;
+}
+.popular-story-image__details:hover .popular-story-image__title a {
+  color: #DA291C;
 }
 
 @media only screen and (max-width:1280px) {
