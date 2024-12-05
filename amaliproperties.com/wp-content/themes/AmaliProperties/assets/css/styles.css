@@ -5120,10 +5120,10 @@ body.page-template-clubhouse .ginput_container_consent {
   width: 100%;
   height: 100%;
 }
-.before\:h-50:before {
-  content: var(--tw-content);
-  height: 50px;
-}
+/*.before\:h-50:before {*/
+/*  content: var(--tw-content);*/
+/*  height: 50px;*/
+/*}*/
 .before\:rounded-full:before {
   content: var(--tw-content);
   border-radius: 9999px;
