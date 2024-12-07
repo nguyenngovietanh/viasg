@@ -1487,7 +1487,7 @@
                 class="relative w-screen h-[1300px] sm:h-[1500px] lg:h-[1700px]"
                 data-target="popup-links-image"
               >
-                <picture
+                <!-- <picture
                   class="hidden lg:block relative w-auto h-full object-cover children:relative children:w-auto children:h-full children:object-cover"
                 >
                   <source
@@ -1499,7 +1499,7 @@
                   <img
                     src="./amaliproperties.com/wp-content/uploads/2024/04/Architect-section.jpg"
                   />
-                </picture>
+                </picture> -->
 
                 <picture
                   loading="eager"
@@ -1535,17 +1535,19 @@
                   data-target="popup-links-image-blur"
                 ></div>
               </div>
+
               <div
-                class="absolute right-0 bottom-0 left-0 w-screen h-dvh"
-                data-target="popup-links-content"
+                class="relative right-0 bottom-0 left-0 w-screen h-dvh"
+                data-target="popup-links-content" 
+                style="background-image: url('./amaliproperties.com/wp-content/uploads/2024/04/Architect-section.jpg.webp'); background-position: center; background-size: cover; background-repeat: no-repeat;"
               >
                 <div class="container h-full w-full m-0 p-0" style="padding: 0 !important;">
-                  <div class="self-start sm:self-end" style="width: 75%; margin-top: 80px;">
+                  <div class="self-start sm:self-end" style="width: 75%; justify-content: center; height: 100%; display: flex; flex-direction: column;">
                     <div class="about-us-section" style="padding: 32px; border-radius: 0 16px 16px 0; background: rgba(219, 219, 219, 0.2); backdrop-filter: blur(8px); color: #ffffff; font-family: bt-beausans;"> 
                       <div style="font-size: 32px; margin-bottom: 8px; font-family: bt-beausans; font-weight: bold;">Giới thiệu chung</div>
                       <p style="font-size: 20px;">VIASG là tập đoàn đa ngành hàng đầu, cung cấp các giải pháp toàn diện trong lĩnh vực đầu tư, xây dựng, giáo dục, vật liệu xây dựng và nông nghiệp xanh, với mục tiêu kiến tạo tương lai bền vững cho cộng đồng.</p>
                     </div>
-                    <button style="padding: 8px; margin-top: 40px; margin-left: 60px; border-radius: 60px; background: #726053; color: #ffffff; display: flex; align-items: center; font-family: bt-beausans;">
+                    <button style="padding: 8px; margin-top: 40px; margin-left: 60px; border-radius: 60px; background: #726053; color: #ffffff; display: flex; align-items: center; font-family: bt-beausans; width: 176px;">
                       <p>&nbsp;	Tìm hiểu thêm</p>
                       <div class="more-icon" style="padding: 8px; background: #ffffff; border-radius: 50px; margin-left: 8px;">
                         <svg stroke="#726053" fill="#726053" stroke-width="1.2" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L10.293 8 4.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path></svg>
@@ -1554,6 +1556,24 @@
                   </div>
                 </div>
               </div>
+             
+              <div
+                class="relative right-0 bottom-0 left-0 w-screen h-dvh"
+                data-target="popup-links-content" 
+                style="background-image: url('./amaliproperties.com/wp-content/uploads/2024/04/role.png'); background-position: center; background-size: cover; background-repeat: no-repeat;"
+              >
+                <div class="container h-full w-full m-0 p-0" style="padding: 0 !important;">
+                  <div class="" style="width: 100%; justify-content: center; height: 100%; display: flex; flex-direction: column; align-items: center;">
+                    <div class="flex justify-center">
+                      <div class="" style="width: 70%; padding: 32px; border-radius: 16px; background: rgba(226, 226, 226, 0.2); backdrop-filter: blur(5px); color: #ffffff; font-family: bt-beausans;"> 
+                        <div style="font-size: 32px; margin-bottom: 8px; font-family: bt-beausans; font-weight: bold;">Các lĩnh vực mà VIASG hướng tới</div>
+                        <p style="font-size: 20px;">Với mong muốn đem đến cho thị trường giải pháp đột phá trong lĩnh vực đầu tư, xây dựng, giáo dục, vật liệu và nông nghiệp bền vững.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
               <div
                 class="absolute inset-0 backdrop-blur-0 pointer-events-none"
                 data-target="popup-links-blur"
@@ -1676,20 +1696,7 @@
                   sizes="(max-width: 1170px) 100vw, 1170px"
                 />
               </picture>
-              <picture
-                class="hidden lg:block relative w-full w-auto object-cover children:relative children:w-full children:h-auto children:object-cover"
-              >
-                <source
-                  type="image/webp"
-                  srcset="
-                    ./amaliproperties.com/wp-content/uploads/2024/04/Dive-deeper-2-1-smaller-opt.jpg.webp
-                  "
-                />
-                <img
-                  src="./amaliproperties.com/wp-content/uploads/2024/04/Dive-deeper-2-1-smaller-opt.jpg"
-                />
-              </picture>
-
+              
               <div class="hidden lg:block absolute inset-0 bg-black/30"></div>
               <div
                 class="absolute inset-0 backdrop-blur-0 pointer-events-none"
@@ -1698,25 +1705,13 @@
             </div>
             <!-- sections -->
             <div
-              class="absolute inset-0 w-full h-full"
+              class="relative inset-0 w-full h-full"
               data-target="lifestyle-content"
             >
-              <section
-                class="relative w-full h-screen pt-120 sm:pt-140 lg:pt-[220px] xl:pt-240"
-              >
-                <div class="container">
-                  <div class="flex justify-center">
-                    <div class="" style="width: 70%; padding: 32px; border-radius: 16px; background: rgba(219, 219, 219, 0.2); backdrop-filter: blur(8px); color: #ffffff; font-family: bt-beausans;"> 
-                      <div style="font-size: 32px; margin-bottom: 8px; font-family: bt-beausans; font-weight: bold;">Các lĩnh vực mà VIASG hướng tới</div>
-                      <p style="font-size: 20px;">Với mong muốn đem đến cho thị trường giải pháp đột phá trong lĩnh vực đầu tư, xây dựng, giáo dục, vật liệu và nông nghiệp bền vững.</p>
-                    </div>
-                  </div>
-                </div>
-              </section>
 
               <section
                 class="relative w-full pointer-events-auto"
-                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/gpdt-bg.png); background-size: cover; height: 687px; display: flex; justify-content: center; align-items: center;"
+                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/gpdt-bg.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
                   <div class="flex justify-center">
                     <div
@@ -1759,7 +1754,7 @@
 
               <section
                 class="relative w-full pointer-events-auto"
-                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/xdno-bg.png); background-size: cover; height: 687px; display: flex; justify-content: center; align-items: center;"
+                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/xdno-bg.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
                   <div class="flex justify-center">
                     <div
@@ -1804,7 +1799,7 @@
 
               <section
                 class="relative w-full pointer-events-auto"
-                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/edu-bg.jpg); background-size: cover; height: 687px; display: flex; justify-content: center; align-items: center;"
+                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/edu-bg.jpg); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
                   <div class="flex justify-center">
                     <div
@@ -1844,7 +1839,7 @@
 
               <section
                 class="relative w-full pointer-events-auto"
-                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/VLXD.png); background-size: cover; height: 687px; display: flex; justify-content: center; align-items: center;"
+                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/VLXD.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
                   <div class="flex justify-center">
                     <div
@@ -1894,7 +1889,7 @@
 
               <section
                 class="relative w-full pointer-events-auto"
-                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/nnx-bg.png); background-size: cover; height: 687px; display: flex; justify-content: center; align-items: center;"
+                style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/nnx-bg.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
                   <div class="flex justify-center">
                     <div
@@ -2157,51 +2152,136 @@
         ></div>
       </div>
       <!-- END DIV MAIN CONTENT -->
-
-      <div class="relative w-full" style="margin-top: 600px;">
-        <footer
-          class="site-footer absolute right-0 bottom-0 left-0 w-full bg-dark-blue pt-115 pb-45 lg:pb-50 -z-10 before:absolute before:right-0 before:left-0 before:bottom-full before:h-50 before:bg-sand"
-          data-target="site-footer"
-          style="font-family: bt-beausans; color: #ffffff; z-index: 41;"
-        >
-          <div class="container mb-40 lg:mb-115">
-            <div class="grid grid-cols-12 gap-x-12 gap-y-60 lg:gap-y-90">
-              <div class="col-span-12">
-                <div class="flex justify-center">
-                  <a
-                    href="./index.html"
-                    class="pointer-events-auto"
-                  >
-                    <img
-                      class="relative w-160 h-auto max-h-[auto]"
-                      src="./amaliproperties.com/wp-content/uploads/2024/04/logo-light.png"
-                      alt="Amali Island Logo"
-                      data-target="footer-logo"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div class="col-span-12 lg:col-span-8">
-                <div
-                  class="relative h-full lg:pl-50 lg:pr-20 after:hidden after:lg:block after:absolute after:bottom-0 after:left-50 after:w-3/4 after:h-1 after:bg-white/10"
+    </div>
+    <div class="relative w-full" style="margin-top: 600px;">
+      <footer
+        class="site-footer absolute right-0 bottom-0 left-0 w-full bg-dark-blue pt-115 pb-45 lg:pb-50 -z-10 before:absolute before:right-0 before:left-0 before:bottom-full before:h-50 before:bg-sand"
+        data-target="site-footer"
+        style="font-family: bt-beausans; color: #ffffff; z-index: 41;"
+      >
+        <div class="container mb-40 lg:mb-115">
+          <div class="grid grid-cols-12 gap-x-12 gap-y-60 lg:gap-y-90">
+            <div class="col-span-12">
+              <div class="flex justify-center">
+                <a
+                  href="./index.html"
+                  class="pointer-events-auto"
                 >
-                  <p
-                    class="font-sans font-light text-30 leading-none tracking-2.1 lg:tracking-2.7 uppercase mb-[23px]"
-                    style="font-weight: bold;"
-                  >
-                    Liên hệ chúng tôi
-                  </p>
+                  <img
+                    class="relative w-160 h-auto max-h-[auto]"
+                    src="./amaliproperties.com/wp-content/uploads/2024/04/logo-light.png"
+                    alt="Amali Island Logo"
+                    data-target="footer-logo"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-span-12 lg:col-span-8">
+              <div
+                class="relative h-full lg:pl-50 lg:pr-20 after:hidden after:lg:block after:absolute after:bottom-0 after:left-50 after:w-3/4 after:h-1 after:bg-white/10"
+              >
+                <p
+                  class="font-sans font-light text-30 leading-none tracking-2.1 lg:tracking-2.7 uppercase mb-[23px]"
+                  style="font-weight: bold;"
+                >
+                  Liên hệ chúng tôi
+                </p>
 
+                <a
+                  href="./contact.html"
+                  class="group inline-flex justify-between items-center gap-20 bg-dark-blue/10 text-15 leading-none tracking-1.5 py-10 pr-10 pl-35 rounded-60 overflow-hidden"
+                >
+                  <span
+                    class="relative text-white z-10 transition-colors duration-200 group-hover:text-dark-blue"
+                    >Liên hệ</span
+                  >
+                  <div
+                    class="flex justify-center items-center relative w-35 h-35 rounded-full [&_path]:stroke-dark-blue before:absolute before:size-full before:bg-white before:rounded-full before:transition-transform before:duration-500 group-hover:before:scale-[20] children:z-10"
+                  >
+                    <svg
+                      width="6"
+                      height="10"
+                      viewBox="0 0 6 10"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="Group 209">
+                        <path
+                          id="Line 35"
+                          d="M1 1L4.9264 4.9264"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          id="Line 36"
+                          d="M1 8.71094L4.9264 4.78453"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                        />
+                      </g>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-span-12 lg:col-span-4">
+              <div class="lg:pr-50">
+                <h2
+                  class="font-sans font-light text-30 leading-none tracking-2.1 lg:tracking-2.7 uppercase"
+                  style="font-weight: bold;"
+                >
+                  KHÁM PHÁ
+                </h2>
+                <div style="margin-top:24px;">
                   <a
-                    href="https://amaliproperties.com/contact/"
-                    class="group inline-flex justify-between items-center gap-20 bg-dark-blue/10 text-15 leading-none tracking-1.5 py-10 pr-10 pl-35 rounded-60 overflow-hidden"
+                    href="./introduce.html"
+                    class="group flex justify-between items-center gap-20 text-24 lg:text-26 leading-none tracking-1.2 lg:tracking-1.3 uppercase py-12 border-b border-white"
                   >
                     <span
-                      class="relative text-white z-10 transition-colors duration-200 group-hover:text-dark-blue"
-                      >Liên hệ</span
+                      class="transition-transform duration-300 group-hover:translate-x-15"
+                      >Về chúng tôi</span
                     >
                     <div
-                      class="flex justify-center items-center relative w-35 h-35 rounded-full [&_path]:stroke-dark-blue before:absolute before:size-full before:bg-white before:rounded-full before:transition-transform before:duration-500 group-hover:before:scale-[20] children:z-10"
+                      class="flex justify-center items-center w-35 h-35 rounded-full bg-dark-blue/10 [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15"
+                    >
+                      <svg
+                        width="6"
+                        height="10"
+                        viewBox="0 0 6 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g id="Group 209">
+                          <path
+                            id="Line 35"
+                            d="M1 1L4.9264 4.9264"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            id="Line 36"
+                            d="M1 8.71094L4.9264 4.78453"
+                            stroke="white"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </g>
+                      </svg>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="group flex justify-between items-center gap-20 text-24 lg:text-26 leading-none tracking-1.2 lg:tracking-1.3 uppercase py-12 border-b border-white"
+                  >
+                    <span
+                      class="transition-transform duration-300 group-hover:translate-x-15"
+                      >Các dự án</span
+                    >
+                    <div
+                      class="flex justify-center items-center w-35 h-35 rounded-full bg-dark-blue/10 [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15"
                     >
                       <svg
                         width="6"
@@ -2231,131 +2311,45 @@
                   </a>
                 </div>
               </div>
-              <div class="col-span-12 lg:col-span-4">
-                <div class="lg:pr-50">
-                  <h2
-                    class="font-sans font-light text-30 leading-none tracking-2.1 lg:tracking-2.7 uppercase"
-                    style="font-weight: bold;"
-                  >
-                    KHÁM PHÁ
-                  </h2>
-                  <div style="margin-top:24px;">
-                    <a
-                      href="./introduce.html"
-                      class="group flex justify-between items-center gap-20 text-24 lg:text-26 leading-none tracking-1.2 lg:tracking-1.3 uppercase py-12 border-b border-white"
-                    >
-                      <span
-                        class="transition-transform duration-300 group-hover:translate-x-15"
-                        >Về chúng tôi</span
-                      >
-                      <div
-                        class="flex justify-center items-center w-35 h-35 rounded-full bg-dark-blue/10 [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15"
-                      >
-                        <svg
-                          width="6"
-                          height="10"
-                          viewBox="0 0 6 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g id="Group 209">
-                            <path
-                              id="Line 35"
-                              d="M1 1L4.9264 4.9264"
-                              stroke="white"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                            />
-                            <path
-                              id="Line 36"
-                              d="M1 8.71094L4.9264 4.78453"
-                              stroke="white"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </a>
-                    <a
-                      href="#"
-                      class="group flex justify-between items-center gap-20 text-24 lg:text-26 leading-none tracking-1.2 lg:tracking-1.3 uppercase py-12 border-b border-white"
-                    >
-                      <span
-                        class="transition-transform duration-300 group-hover:translate-x-15"
-                        >Các dự án</span
-                      >
-                      <div
-                        class="flex justify-center items-center w-35 h-35 rounded-full bg-dark-blue/10 [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15"
-                      >
-                        <svg
-                          width="6"
-                          height="10"
-                          viewBox="0 0 6 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <g id="Group 209">
-                            <path
-                              id="Line 35"
-                              d="M1 1L4.9264 4.9264"
-                              stroke="white"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                            />
-                            <path
-                              id="Line 36"
-                              d="M1 8.71094L4.9264 4.78453"
-                              stroke="white"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                            />
-                          </g>
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
+        </div>
+        <div
+          class="copyright px-30 lg:px-60 pt-35 lg:pt-0 border-t border-white/20 lg:border-t-0"
+        >
           <div
-            class="copyright px-30 lg:px-60 pt-35 lg:pt-0 border-t border-white/20 lg:border-t-0"
+            class="flex flex-col lg:flex-row justify-between items-center text-13 leading-none tracking-0.64"
           >
             <div
-              class="flex flex-col lg:flex-row justify-between items-center text-13 leading-none tracking-0.64"
+              class="flex items-center gap-15 text-color text-center lg:text-left mb-20 lg:mb-0"
             >
-              <div
-                class="flex items-center gap-15 text-color text-center lg:text-left mb-20 lg:mb-0"
-              >
-              © VIASG group 2024. All rights reserved.
-              </div>
-              <div
-                class="flex flex-col lg:flex-row items-center gap-5 lg:gap-20"
-              >
-                    <a
-                    href="#"
-                    target="_self"
-                    class=""
-                    >Điều khoản & điều kiện
-                  </a>
+            © VIASG group 2024. All rights reserved.
+            </div>
+            <div
+              class="flex flex-col lg:flex-row items-center gap-5 lg:gap-20"
+            >
                   <a
-                    href="#"
-                    target="_self"
-                    class=""
-                    >Chính sách quyền riêng tư
-                  </a>
-                  <a
-                    href="#"
-                    target="_self"
-                    class=""
-                    >Chính sách cookies
-                  </a>
-              </div>
+                  href="#"
+                  target="_self"
+                  class=""
+                  >Điều khoản & điều kiện
+                </a>
+                <a
+                  href="#"
+                  target="_self"
+                  class=""
+                  >Chính sách quyền riêng tư
+                </a>
+                <a
+                  href="#"
+                  target="_self"
+                  class=""
+                  >Chính sách cookies
+                </a>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
     <!-- JS ARE LOADED HERE WITH FUNCTION.PHP -->
     <script
