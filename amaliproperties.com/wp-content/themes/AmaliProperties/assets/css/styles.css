@@ -102,6 +102,11 @@
 .mfp-s-ready .mfp-preloader {
   display: none;
 }
+#lifestyle{
+  height: auto !important; 
+  max-width: auto !important; 
+  transform: none !important;
+}
 button.mfp-arrow,
 button.mfp-close {
   overflow: visible;
