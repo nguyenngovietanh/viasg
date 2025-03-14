@@ -1039,6 +1039,34 @@
 
       @media (min-width: 992px) and (max-width: 1291px) {
       }
+
+      @media (max-width: 430px) {
+        .bar-icon svg {
+          opacity: 0;
+        }
+        .note-text p {
+          font-size: 16px;
+          margin-top: 300px;
+        }
+        .slide-text p {
+          font-size: 32px !important;
+        }
+        .overlay-roles {
+          width: 80% !important;
+        }
+        .overlay-roles div {
+          font-size: 24px !important;
+        }
+        .roles-section section {
+          height: 400px !important;
+        }
+        .roles-icon {
+          display: none !important;
+        }
+        .section-main-mb {
+          width: 80% !important;
+        }
+      }
     </style>
   </head>
   <body
@@ -1088,7 +1116,7 @@
               >Liên hệ
             </span>
             <div
-              class="flex lg:hidden justify-center items-center w-full h-full"
+              class="bar-icon flex lg:hidden justify-center items-center w-full h-full"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.75 7C20.75 7.41421 20.4142 7.75 20 7.75L4 7.75C3.58579 7.75 3.25 7.41421 3.25 7C3.25 6.58579 3.58579 6.25 4 6.25L20 6.25C20.4142 6.25 20.75 6.58579 20.75 7Z" fill="white"/>
@@ -1316,19 +1344,19 @@
                   <source
                     type="image/webp"
                     srcset="
-                      ./amaliproperties.com/wp-content/uploads/2024/04/Artboard-1-1.jpg.webp          2632w,
-                      ./amaliproperties.com/wp-content/uploads/2024/04/Artboard-1-1-640x2481.jpg.webp  640w
+                      ./amaliproperties.com/wp-content/uploads/2024/04/Header-V3-1.jpg          2632w,
+                      ./amaliproperties.com/wp-content/uploads/2024/04/Header-V3-1.jpg    640w
                     "
                     sizes="(max-width: 2632px) 100vw, 2632px"
                   />
                   <img
                     loading="eager"
                     role="presentation"
-                    src="./amaliproperties.com/wp-content/uploads/2024/04/Artboard-1-1.jpg"
+                    src="./amaliproperties.com/wp-content/uploads/2024/04/new-bg.jpg  "
                     alt=""
                     srcset="
-                      ./amaliproperties.com/wp-content/uploads/2024/04/Artboard-1-1.jpg          2632w,
-                      ./amaliproperties.com/wp-content/uploads/2024/04/Artboard-1-1-640x2481.jpg  640w
+                      ./amaliproperties.com/wp-content/uploads/2024/04/Header-V3-1.jpg           2632w,
+                      ./amaliproperties.com/wp-content/uploads/2024/04/Header-V3-1.jpg    640w
                     "
                     sizes="(max-width: 2632px) 100vw, 2632px"
                   />
@@ -1361,7 +1389,7 @@
               class="absolute top-150 sm:180 lg:top-230 right-0 left-0 w-full text-center text-white z-40 opacity-0"
               data-target="horizontal-scroll-text-1"
             >
-              <div class="container">
+              <div class="container note-text">
                 <p
                   class="font-sans font-light text-30 tracking-1.5 sm:tracking-1.9 lg:tracking-1.28 uppercase lg:px-30 xl:px-0 [&_br]:hidden xl:[&_br]:inline"
                   style="line-height: 140%;"
@@ -1384,7 +1412,7 @@
             </a>
           </div>
           <!-- architecture -->
-          <section
+          <div
             id="architecture"
             data-name="horizontal-scroll"
             class="relative opacity-0 z-30 pointer-events-auto overflow-hidden sm:overflow-visible"
@@ -1452,7 +1480,7 @@
                 ></div>
               </div>
               <div
-                class="flex flex-row flex-nowrap gap-65 absolute bottom-0 left-0 text-white pl-100 pr-70"
+                class="slide-text flex flex-row flex-nowrap gap-65 absolute bottom-0 left-0 text-white pl-100 pr-70"
                 data-target="horizontal-scroll-text-container"
                 style="margin-bottom: 80px;"
               >
@@ -1472,13 +1500,12 @@
                 </p>
               </div>
             </div>
-          </section>
+          </div>
           <div class="relative">
             <div
               class="absolute top-120 sm:top-320 lg:top-230 right-0 left-0 w-full text-white z-[41] opacity-0 pointer-events-auto"
               data-target="popup-links-text"
             >
-             
             </div>
             <section
               data-name="popup-links"
@@ -1527,7 +1554,10 @@
               <div
                 class="relative right-0 bottom-0 left-0 w-screen h-dvh"
                 data-target="popup-links-content" 
-                style="background-image: url('./amaliproperties.com/wp-content/uploads/2024/04/Architect-section.jpg.webp'); background-position: center; background-size: cover; background-repeat: no-repeat;"
+                style="background-image: url('./amaliproperties.com/wp-content/uploads/2024/04/Architect-section.jpg.webp'); 
+                        background-position: center; 
+                        background-size: 100%; 
+                        background-repeat: no-repeat;"
               >
                 <div class="container h-full w-full m-0 p-0" style="padding: 0 !important;">
                   <div class="self-start sm:self-end" style="width: 75%; justify-content: center; height: 100%; display: flex; flex-direction: column;">
@@ -1553,7 +1583,7 @@
                 <div class="container h-full w-full m-0 p-0" style="padding: 0 !important;">
                   <div class="" style="width: 100%; justify-content: center; height: 100%; display: flex; flex-direction: column; align-items: center;">
                     <div class="flex justify-center">
-                      <div class="" style="width: 70%; padding: 32px; border-radius: 16px; background: rgba(226, 226, 226, 0.2); backdrop-filter: blur(5px); color: #ffffff; font-family: bt-beausans;"> 
+                      <div class="overlay-roles" style="width: 70%; padding: 32px; border-radius: 16px; background: rgba(226, 226, 226, 0.2); backdrop-filter: blur(5px); color: #ffffff; font-family: bt-beausans;"> 
                         <div style="font-size: 32px; margin-bottom: 8px; font-family: bt-beausans; font-weight: bold;">Các lĩnh vực mà VIASG hướng tới</div>
                         <p style="font-size: 20px;">Với mong muốn đem đến cho thị trường giải pháp đột phá trong lĩnh vực đầu tư, xây dựng, giáo dục, vật liệu và nông nghiệp bền vững.</p>
                       </div>
@@ -1572,7 +1602,7 @@
           <section
             id="lifestyle"
             data-name="lifestyle-banner"
-            class="relative w-screen lg:-mt-[100vh] overflow-hidden z-[41] lg:opacity-0 lg:invisible pointer-events-none"
+            class="relative w-screen overflow-hidden z-[41] lg:opacity-0 lg:invisible pointer-events-none"
 	    style="transform: none !important"
             data-section-indicator-trigger="2"
             style="top: auto;"
@@ -1695,18 +1725,18 @@
             </div>
             <!-- sections -->
             <div
-              class="relative inset-0 w-full h-full"
+              class="roles-section relative inset-10 w-full h-full"
               data-target="lifestyle-content"
             >
 
               <section
-                class="relative w-full pointer-events-auto"
+                class="relative w-full"
                 style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/gpdt-bg.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
-                  <div class="flex justify-center">
+                  <div class="section-main-mb flex justify-center">
                     <div
                         class="text-white"
-                        style="width: 100%; max-width: 800px; margin-top: 16px;"
+                        style="width: 100%; max-width: 600px; margin-top: 16px;"
                       >
                         <h3
                           class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8"
@@ -1726,6 +1756,7 @@
                         </button>
                     </div>
                     <div
+                      class="roles-icon"
                       style="margin-left: 32px;"
                     >
                       <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
@@ -1746,8 +1777,9 @@
                 class="relative w-full pointer-events-auto"
                 style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/xdno-bg.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
-                  <div class="flex justify-center">
+                  <div class="section-main-mb flex justify-center">
                     <div
+                      class="roles-icon"
                       style="margin-right: 48px;"
                     >
                       <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
@@ -1765,7 +1797,7 @@
                     </div>
                     <div
                         class="text-white"
-                        style="width: 100%; max-width: 800px; margin-top: 16px;"
+                        style="width: 100%; max-width: 600px; margin-top: 16px;"
                       >
                         <h3
                           class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8"
@@ -1791,10 +1823,10 @@
                 class="relative w-full pointer-events-auto"
                 style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/edu-bg.jpg); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
-                  <div class="flex justify-center">
+                  <div class="section-main-mb flex justify-center">
                     <div
                         class="text-white"
-                        style="width: 100%; max-width: 800px; margin-top: 16px;"
+                        style="width: 100%; max-width: 600px; margin-top: 16px;"
                       >
                         <h3
                           class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8"
@@ -1814,6 +1846,7 @@
                         </button>
                     </div>
                     <div
+                      class="roles-icon"
                       style="margin-left: 32px;"
                     >
                       <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
@@ -1831,8 +1864,9 @@
                 class="relative w-full pointer-events-auto"
                 style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/VLXD.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
-                  <div class="flex justify-center">
+                  <div class="section-main-mb flex justify-center">
                     <div
+                      class="roles-icon"
                       style="margin-right: 48px;"
                     >
                       <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
@@ -1855,7 +1889,7 @@
                     </div>
                     <div
                         class="text-white"
-                        style="width: 100%; max-width: 800px; margin-top: 16px;"
+                        style="width: 100%; max-width: 600px; margin-top: 16px;"
                       >
                         <h3
                           class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8"
@@ -1881,10 +1915,10 @@
                 class="relative w-full pointer-events-auto"
                 style="background-image: url(./amaliproperties.com/wp-content/uploads/2024/04/nnx-bg.png); background-size: cover; height: 800px; display: flex; justify-content: center; align-items: center;"
               >
-                  <div class="flex justify-center">
+                  <div class="section-main-mb flex justify-center">
                     <div
                         class="text-white"
-                        style="width: 100%; max-width: 800px; margin-top: 16px;"
+                        style="width: 100%; max-width: 600px; margin-top: 16px;"
                       >
                         <h3
                           class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8"
@@ -1904,6 +1938,7 @@
                         </button>
                     </div>
                     <div
+                      class="roles-icon"
                       style="margin-left: 32px;"
                     >
                       <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
@@ -1917,35 +1952,35 @@
               </section>
             </div>
           </section>
-                  <picture
-                    loading="eager"
-                    role="presentation"
-                    class="absolute inset-0 w-full h-full object-cover children:absolute children:inset-0 children:w-full children:h-full children:object-cover opacity-0 invisible"
-                  >
-                    <source
-                      type="image/webp"
-                      srcset="
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1.jpg.webp           3500w,
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-640x753.jpg.webp    640w,
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-400x471.jpg.webp    400w,
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-1280x1506.jpg.webp 1280w
-                      "
-                      sizes="(max-width: 3500px) 100vw, 3500px"
-                    />
-                    <img
-                      loading="eager"
-                      role="presentation"
-                      src="./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1.jpg"
-                      alt=""
-                      srcset="
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1.jpg           3500w,
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-640x753.jpg    640w,
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-400x471.jpg    400w,
-                        ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-1280x1506.jpg 1280w
-                      "
-                      sizes="(max-width: 3500px) 100vw, 3500px"
-                    />
-                  </picture>
+          <picture
+            loading="eager"
+            role="presentation"
+            class="absolute inset-0 w-full h-full object-cover children:absolute children:inset-0 children:w-full children:h-full children:object-cover opacity-0 invisible"
+          >
+            <source
+              type="image/webp"
+              srcset="
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1.jpg.webp           3500w,
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-640x753.jpg.webp    640w,
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-400x471.jpg.webp    400w,
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-1280x1506.jpg.webp 1280w
+              "
+              sizes="(max-width: 3500px) 100vw, 3500px"
+            />
+            <img
+              loading="eager"
+              role="presentation"
+              src="./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1.jpg"
+              alt=""
+              srcset="
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1.jpg           3500w,
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-640x753.jpg    640w,
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-400x471.jpg    400w,
+                ./amaliproperties.com/wp-content/uploads/2024/03/GF-Living-Room-View-2-EXT02-1-1280x1506.jpg 1280w
+              "
+              sizes="(max-width: 3500px) 100vw, 3500px"
+            />
+          </picture>
                 </div>
                 <div
                   class="hidden lg:block absolute top-[33.7vw] left-0 aspect-[395/330] w-[27.4vw]"
@@ -2142,7 +2177,7 @@
         ></div>
       </div>
 
-      <div class="relative w-full">
+      <div class="relative w-full h-full">
         <footer
           class="site-footer absolute right-0 bottom-0 left-0 w-full bg-dark-blue pt-115 pb-45 lg:pb-50 -z-10 before:absolute before:right-0 before:left-0 before:bottom-full before:h-50 before:bg-sand"
           data-target="site-footer"
