@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-GB">
   <head>
+    <script>
+      const express = require('express');
+      const cors = require('cors');
+      const app = express();
+
+      app.use(cors()); // Cho phép tất cả origin truy cập
+      // hoặc giới hạn:
+      app.use(cors({
+        origin: 'https://viasg.vn'
+      }));
+
+      // Ví dụ route ảnh
+      app.get('/image.jpg', (req, res) => {
+        res.sendFile('/path/to/image.jpg');
+      });
+
+      app.listen(3000);
+
+    </script>
     <script
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"

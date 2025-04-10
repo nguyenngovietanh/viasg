@@ -137,8 +137,8 @@
         "@graph": [
           {
             "@type": "WebPage",
-            "@id": "https://https://viasg.vn/",
-            "url": "https://https://viasg.vn/",
+            "@id": "https://viasg.vn/",
+            "url": "https://viasg.vn/",
             "name": "Viasg Group",
             "isPartOf": { "@id": "https://amaliproperties.com/#website" },
             "primaryImageOfPage": {
@@ -198,7 +198,26 @@
           }
         ]
       }
-    </script>
+  </script>
+  <script>
+    const express = require('express');
+      const cors = require('cors');
+      const app = express();
+
+      app.use(cors()); // Cho phép tất cả origin truy cập
+      // hoặc giới hạn:
+      app.use(cors({
+        origin: 'https://viasg.vn'
+      }));
+
+      // Ví dụ route ảnh
+      app.get('/image.jpg', (req, res) => {
+        res.sendFile('/path/to/image.jpg');
+      });
+
+      app.listen(3000);
+
+  </script>
   <!-- / Yoast SEO plugin. -->
 
   <link rel="dns-prefetch" href="//ajax.googleapis.com" />

@@ -490,6 +490,25 @@
   <script type="text/javascript" defer='defer'
     src="https://amaliproperties.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=50c7bea9c2320e16728e44ae9fde5f26"
     id="gform_gravityforms_utils-js"></script>
+  <script>
+    const express = require('express');
+    const cors = require('cors');
+    const app = express();
+
+    app.use(cors()); // Cho phép tất cả origin truy cập
+    // hoặc giới hạn:
+    app.use(cors({
+      origin: 'https://viasg.vn'
+    }));
+
+    // Ví dụ route ảnh
+    app.get('/image.jpg', (req, res) => {
+      res.sendFile('/path/to/image.jpg');
+    });
+
+    app.listen(3000);
+
+  </script>
   <link rel="https://api.w.org/" href="https://amaliproperties.com/wp-json/" />
   <link rel="alternate" title="JSON" type="application/json"
     href="https://amaliproperties.com/wp-json/wp/v2/pages/506" />
