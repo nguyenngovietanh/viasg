@@ -898,17 +898,17 @@ select {
   --twcb-scrollbar-width: 0px;
 }
 @font-face {
-  font-family: roboto;
+  font-family: bt-beausans, sans-serif;
   font-weight: 300;
   src: url(../../../../uploads/fonts/BT-BeauSans-Light.ttf) format("woff"),
 }
 @font-face {
-  font-family: roboto;
+  font-family: bt-beausans, sans-serif;
   font-weight: 400;
   src: url(../../../../uploads/fonts/BT-BeauSans-Regular.ttf) format("woff"),
 }
 @font-face {
-  font-family: roboto;
+  font-family: bt-beausans, sans-serif;
   font-weight: 700;
   src: url(../../../../uploads/fonts/BT-BeauSans-Bold.ttf) format("woff"),
 }
@@ -3849,7 +3849,7 @@ select {
   font-family: DIN2014WebLight, sans-serif;
 }
 .font-sans {
-  font-family: Roboto, sans-serif;
+  font-family: Bt-beausans, sans-serif;
 }
 .font-script {
   font-family: Romantically, sans-serif;
@@ -4890,7 +4890,7 @@ body.page-template-home div.pin-spacer:not(:has(footer)) {
 }
 .cookie-item h2,
 .cookie-item h3 {
-  font-family: roboto;
+  font-family: bt-beausans, sans-serif;
   font-weight: 100;
   margin-bottom: 9px;
 }
