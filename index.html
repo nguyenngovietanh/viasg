@@ -433,9 +433,27 @@
     }
 
     @media (max-width: 430px) {
+      .nav-container:not(.open), .nav-container.open {
+        right: 30px !important;
+        left: auto;
+      }
+
+      .nav-container.open {
+        width: 320px !important;
+      }
+
+      .menu-header {
+        flex-direction: row-reverse;
+      }
+
+      .nav-container:not(.open) {
+        padding: 12px 24px 12px 12px;
+      }
+
       #heroTitle {
         font-size: 24px !important;
       }
+
       .h1-swap {
         font-size: 16px !important;
       }
@@ -475,6 +493,21 @@
         margin-left: 0 !important;
         margin-right: 0 !important;
       }
+
+      .contact-btn {
+          background: #d2c2ad;
+          color: #1a2026;
+          padding: 8px;
+          border-radius: 40px;
+          cursor: pointer;
+          font-size: 12px;
+          font-weight: 300;
+          margin-left: 0;
+      }
+
+      .menu-icon {
+        padding-left: 4px;
+      }
     }
   </style>
 </head>
@@ -489,7 +522,7 @@
     <div class="nav-container" id="navContainer">
       <div class="menu-header">
         <button class="menu-icon" id="toggleMenu">☰</button>
-        <button class="contact-btn"> <a href="/contact.html" target="_blank">LIÊN HỆ</a></button>
+        <button class="contact-btn" id="contactButton"> <a href="/contact.html" target="_blank">LIÊN HỆ</a></button>
       </div>
 
       <div class="menu-content">
@@ -941,6 +974,40 @@
 
     // Hiển thị heroTitle ban đầu
     heroTitleElement.style.opacity = 1;
+
+    const contactButton = document.getElementById('contactButton');
+      const contactIconHTML = `
+            <div class="flex lg:hidden justify-center items-center w-full h-full">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_3971_69)">
+                <mask id="path-1-inside-1_3971_69" fill="white">
+                  <path
+                    d="M12.3533 16.0187C11.6994 15.9578 11.0697 15.7921 10.4554 15.5651C8.84567 14.9704 7.43479 14.0447 6.13375 12.941C4.83356 11.8381 3.7092 10.5764 2.77174 9.15191C2.03692 8.03541 1.44856 6.85033 1.13224 5.54342C1.07221 5.29635 1.03219 5.04417 0.98962 4.79284C0.94875 4.55258 1.00622 4.33363 1.12841 4.12192C1.58778 3.32618 2.15485 2.61181 2.76578 1.93067C3.10679 1.55027 3.46441 1.18605 3.89014 0.89894C4.361 0.581584 4.88635 0.648463 5.22354 1.11065C5.9724 2.13684 6.67443 3.19456 7.19127 4.3626C7.20192 4.38688 7.21213 4.41158 7.22193 4.43629C7.4697 5.06291 7.38711 5.4037 6.87793 5.84799C6.64208 6.05417 6.40792 6.2629 6.1644 6.4597C6.05584 6.54746 6.03668 6.62711 6.08692 6.75832C6.7566 8.50995 7.92524 9.80622 9.60603 10.6386C9.82528 10.7472 10.0522 10.8367 10.2804 10.924C10.3732 10.9598 10.4375 10.9436 10.5022 10.8669C10.718 10.6113 10.9381 10.3591 11.1587 10.1078C11.2144 10.0439 11.2766 9.98555 11.3383 9.92719C11.6295 9.65158 11.9599 9.56383 12.349 9.69589C12.8199 9.8552 13.2563 10.0848 13.6846 10.3302C14.404 10.7425 15.0946 11.2 15.7689 11.6814C15.8907 11.7683 16.0001 11.8675 16.0878 11.9902C16.3505 12.3583 16.3667 12.6748 16.1227 13.0539C15.8358 13.4999 15.4594 13.8684 15.0686 14.2211C14.3849 14.8379 13.6688 15.4117 12.865 15.8675C12.7075 15.957 12.5457 16.04 12.3533 16.0183V16.0187Z" />
+                </mask>
+                <path
+                  d="M12.3533 16.0187C11.6994 15.9578 11.0697 15.7921 10.4554 15.5651C8.84567 14.9704 7.43479 14.0447 6.13375 12.941C4.83356 11.8381 3.7092 10.5764 2.77174 9.15191C2.03692 8.03541 1.44856 6.85033 1.13224 5.54342C1.07221 5.29635 1.03219 5.04417 0.98962 4.79284C0.94875 4.55258 1.00622 4.33363 1.12841 4.12192C1.58778 3.32618 2.15485 2.61181 2.76578 1.93067C3.10679 1.55027 3.46441 1.18605 3.89014 0.89894C4.361 0.581584 4.88635 0.648463 5.22354 1.11065C5.9724 2.13684 6.67443 3.19456 7.19127 4.3626C7.20192 4.38688 7.21213 4.41158 7.22193 4.43629C7.4697 5.06291 7.38711 5.4037 6.87793 5.84799C6.64208 6.05417 6.40792 6.2629 6.1644 6.4597C6.05584 6.54746 6.03668 6.62711 6.08692 6.75832C6.7566 8.50995 7.92524 9.80622 9.60603 10.6386C9.82528 10.7472 10.0522 10.8367 10.2804 10.924C10.3732 10.9598 10.4375 10.9436 10.5022 10.8669C10.718 10.6113 10.9381 10.3591 11.1587 10.1078C11.2144 10.0439 11.2766 9.98555 11.3383 9.92719C11.6295 9.65158 11.9599 9.56383 12.349 9.69589C12.8199 9.8552 13.2563 10.0848 13.6846 10.3302C14.404 10.7425 15.0946 11.2 15.7689 11.6814C15.8907 11.7683 16.0001 11.8675 16.0878 11.9902C16.3505 12.3583 16.3667 12.6748 16.1227 13.0539C15.8358 13.4999 15.4594 13.8684 15.0686 14.2211C14.3849 14.8379 13.6688 15.4117 12.865 15.8675C12.7075 15.957 12.5457 16.04 12.3533 16.0183V16.0187Z"
+                  fill="#1A2026" stroke="#DAD0C1" stroke-width="0.765957" mask="url(#path-1-inside-1_3971_69)" />
+              </g>
+              <defs>
+                <clipPath id="clip0_3971_69">
+                  <rect width="15.3191" height="15.3191" fill="white" transform="translate(0.976562 0.703125)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+      `;
+
+      function updateContactButton() {
+        if (window.innerWidth < 431) {
+          contactButton.innerHTML = contactIconHTML;
+        } else {
+          contactButton.textContent = 'Liên hệ';
+        }
+      }
+
+      // Gọi hàm khi trang tải và khi thay đổi kích thước cửa sổ
+      updateContactButton();
+      window.addEventListener('resize', updateContactButton);
   </script>
 
 </body>
