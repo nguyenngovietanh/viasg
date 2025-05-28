@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/amaliproperties.com/wp-content/uploads/2024/04/favicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/amaliproperties.com/wp-content/uploads/2024/04/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/amaliproperties.com/wp-content/uploads/2024/04/favicon.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" id="gform_basic-css"
     href="/amaliproperties.com/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.8.18" type="text/css"
     media="all" />
@@ -22,6 +26,7 @@
   <link rel="stylesheet" id="screen-css-css"
     href="/amaliproperties.com/wp-content/themes/AmaliProperties/assets/css/styles.css?ver=1721656333" type="text/css"
     media="all" />
+
   <title>VIASG Group</title>
   <style>
     @font-face {
@@ -81,7 +86,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center; 
+      text-align: center;
       overflow: hidden;
       transition: filter 0.5s ease-in-out;
     }
@@ -202,7 +207,7 @@
       color: #1a2026;
       border: none;
       padding: 12px 20px;
-      border-radius: 20px;
+      border-radius: 80px;
       cursor: pointer;
       font-size: 12px;
       font-weight: 300;
@@ -265,22 +270,6 @@
       stroke: #ffffff;
       fill: #ffffff;
     }
-
-
-    .global-custom-cursor {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 2px;
-      height: 2px;
-      background-color: #000;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transition: transform 0.05s linear;
-      /* Chỉ transition transform cho sự di chuyển */
-    }
-
 
     .menu-content {
       opacity: 0;
@@ -374,6 +363,7 @@
       height: 100%;
       background: url('/amaliproperties.com/wp-content/uploads/2024/04/Minima-Home-large - Copy.png') no-repeat center center/cover;
       transition: filter 0.5s ease-in-out;
+      animation: zoom 20s linear 10ms infinite;
     }
 
     .luxury-text-container {
@@ -399,6 +389,7 @@
       align-items: center;
       justify-content: center;
       height: 100%;
+      animation: fadeInUp 1s linear;
     }
 
     .luxury-text.left {
@@ -447,6 +438,7 @@
       height: 100%;
       background: url('/amaliproperties.com/wp-content/uploads/2024/04/role-bg.png') no-repeat center center/cover;
       transition: filter 0.5s ease-in-out;
+      animation: zoom 20s linear 10ms infinite;
     }
 
     .industry-introduce-container {
@@ -478,6 +470,31 @@
       align-items: center;
     }
 
+    .role-box .text-white button {
+      transition: all 0.4s ease-in-out;
+      background: #ffffff40;
+      backdrop-filter: blur(4px);
+    }
+
+    .role-box .text-white button:hover {
+      background: #ffffff !important;
+      color: #1a1a1a !important;
+    }
+
+    /* Trạng thái ban đầu (ẩn, chưa animate) */
+    .fade-up-element {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      /* Dùng transition thay vì animation */
+    }
+
+    /* Trạng thái khi animate (hiển thị, về vị trí gốc) */
+    .fade-up-element.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     @keyframes zoom {
       from {
         transform: scale(1.3);
@@ -485,6 +502,18 @@
 
       to {
         transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -515,7 +544,7 @@
         line-height: 28px !important;
       }
 
-      .role-box div button {
+      .role-box .text-white button {
         margin-top: 16px !important;
       }
 
@@ -681,8 +710,8 @@
   <section class="industry-section" id="industrySection">
     <div class="industry-background"></div>
     <div class="industry-introduce-container">
-      <h2 class="industry-text left">Các lĩnh vực mà VIASG hướng tới</h2>
-      <p>Với mong muốn đem đến cho thị trường giải pháp đột phá trong lĩnh vực đầu tư, xây dựng, giáo dục, vật
+      <h2 class="industry-text left fade-up-element">Các lĩnh vực mà VIASG hướng tới</h2>
+      <p class="fade-up-element">Với mong muốn đem đến cho thị trường giải pháp đột phá trong lĩnh vực đầu tư, xây dựng, giáo dục, vật
         liệu và nông
         nghiệp bền vững.</p>
     </div>
@@ -694,14 +723,14 @@
     <div class="role-box role-box-1 section-main-mb flex justify-center">
       <div class="text-white" style="width: 100%; max-width: 600px; margin-top: 16px;">
         <h3
-          class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
+          class="fade-up-element font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
           GIẢI PHÁP ĐẦU TƯ
         </h3>
         <p
-          class="font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
+          class="fade-up-element font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
           Tối ưu hóa lợi nhuận với các giải pháp đầu tư đa dạng và bền vững, đảm bảo quản lý rủi ro hiệu quả.
         </p>
-        <button onclick="changeOpenGpdt()" class="backdrop-blur-24 bg-white/10"
+        <button onclick="changeOpenGpdt()" class="fade-up-element"
           style="padding: 8px; margin-top: 30px; border-radius: 60px; color: #ffffff; display: flex; align-items: center; font-family: bt-beausans, sans-serif;">
           <p>&nbsp; Tìm hiểu thêm</p>
           <div class="more-icon" style="padding: 8px; background: #ffffff; border-radius: 50px; margin-left: 8px;">
@@ -714,7 +743,7 @@
           </div>
         </button>
       </div>
-      <div class="roles-icon" style="margin-left: 32px;">
+      <div class="roles-icon fade-up-element" style="margin-left: 32px;">
         <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="101" viewBox="0 0 100 101" fill="none">
             <circle cx="50.0004" cy="33.3334" r="27.7778" stroke="white" stroke-width="2.4" />
@@ -737,7 +766,7 @@
   <section class="relative w-full"
     style="background-image: url(/amaliproperties.com/wp-content/uploads/2024/04/xdno-bg.png); background-size: cover; height: 620px; display: flex; justify-content: center; align-items: center;">
     <div class="role-box role-box-2 flex justify-center">
-      <div class="roles-icon" style="margin-right: 48px;">
+      <div class="roles-icon fade-up-element" style="margin-right: 48px;">
         <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
           <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -761,15 +790,15 @@
       </div>
       <div class="text-white" style="width: 100%; max-width: 600px; margin-top: 16px;">
         <h3
-          class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
+          class="fade-up-element font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
           XÂY DỰNG NHÀ Ở
         </h3>
         <p
-          class="font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
+          class="fade-up-element font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
           Kiến tạo không gian sống hiện đại và bền vững với những dự án nhà ở chất lượng cao, đáp ứng mọi nhu
           cầu của cư dân.
         </p>
-        <button class="backdrop-blur-24 bg-white/10"
+        <button class="fade-up-element"
           style="padding: 8px; margin-top: 30px; border-radius: 60px; color: #ffffff; display: flex; align-items: center; font-family: bt-beausans, sans-serif;">
           <p>&nbsp; Tìm hiểu thêm</p>
           <div class="more-icon" style="padding: 8px; background: #ffffff; border-radius: 50px; margin-left: 8px;">
@@ -791,15 +820,15 @@
     <div class="role-box role-box-3 flex justify-center">
       <div class="text-white" style="width: 100%; max-width: 600px; margin-top: 16px;">
         <h3
-          class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
+          class="fade-up-element font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
           GIÁO DỤC
         </h3>
         <p
-          class="font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
+          class="fade-up-element font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
           Cung cấp các giải pháp giáo dục toàn diện, từ mầm non đến đại học, với mục tiêu phát triển toàn diện
           cho thế hệ tương lai.
         </p>
-        <button class="backdrop-blur-24 bg-white/10"
+        <button class="fade-up-element"
           style="padding: 8px; margin-top: 30px; border-radius: 60px; color: #ffffff; display: flex; align-items: center; font-family: bt-beausans, sans-serif;">
           <p>&nbsp; Tìm hiểu thêm</p>
           <div class="more-icon" style="padding: 8px; background: #ffffff; border-radius: 50px; margin-left: 8px;">
@@ -812,7 +841,7 @@
           </div>
         </button>
       </div>
-      <div class="roles-icon" style="margin-left: 32px;">
+      <div class="roles-icon fade-up-element" style="margin-left: 32px;">
         <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
             <path
@@ -832,7 +861,7 @@
   <section class="relative w-full"
     style="background-image: url(/amaliproperties.com/wp-content/uploads/2024/04/VLXD.png); background-size: cover; height: 620px; display: flex; justify-content: center; align-items: center;">
     <div class="role-box role-box-4 section-main-mb flex justify-center">
-      <div class="roles-icon" style="margin-right: 48px;">
+      <div class="roles-icon fade-up-element" style="margin-right: 48px;">
         <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
             <g clip-path="url(#clip0_762_602)">
@@ -862,15 +891,15 @@
       </div>
       <div class="text-white" style="width: 100%; max-width: 600px; margin-top: 16px;">
         <h3
-          class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
+          class="fade-up-element font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
           VẬT LIỆU XÂY DỰNG
         </h3>
         <p
-          class="font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
+          class="fade-up-element font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
           Cung cấp vật liệu xây dựng chất lượng cao, thân thiện với môi trường, đáp ứng mọi tiêu chuẩn xây
           dựng hiện đại.
         </p>
-        <button onclick="changeOpenVlxd()" class="backdrop-blur-24 bg-white/10"
+        <button onclick="changeOpenVlxd()" class="fade-up-element"
           style="padding: 8px; margin-top: 30px; border-radius: 60px; color: #ffffff; display: flex; align-items: center; font-family: bt-beausans, sans-serif;">
           <p>&nbsp; Tìm hiểu thêm</p>
           <div class="more-icon" style="padding: 8px; background: #ffffff; border-radius: 50px; margin-left: 8px;">
@@ -892,15 +921,15 @@
     <div class="role-box role-box-5 section-main-mb flex justify-center">
       <div class="text-white" style="width: 100%; max-width: 600px; margin-top: 16px;">
         <h3
-          class="font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
+          class="fade-up-element font-sans font-light text-27 sm:text-38 leading-26 sm:leading-38 tracking-1.35 sm:tracking-1.9 uppercase mb-8">
           NÔNG NGHIỆP XANH
         </h3>
         <p
-          class="font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
+          class="fade-up-element font-body font-light text-20 sm:text-24 lg:text-21 xl:text-24 leading-26 sm:leading-33 lg:leading-30 xl:leading-33 tracking-0.2 sm:tracking-0.72">
           Phát triển nông nghiệp bền vững với các phương pháp canh tác xanh, góp phần bảo vệ môi trường và
           nâng cao chất lượng nông sản.
         </p>
-        <button onclick="changeOpenNnx()" class="backdrop-blur-24 bg-white/10"
+        <button onclick="changeOpenNnx()" class="fade-up-element"
           style="padding: 8px; margin-top: 30px; border-radius: 60px; color: #ffffff; display: flex; align-items: center; font-family: bt-beausans, sans-serif;">
           <p>&nbsp; Tìm hiểu thêm</p>
           <div class="more-icon" style="padding: 8px; background: #ffffff; border-radius: 50px; margin-left: 8px;">
@@ -913,7 +942,7 @@
           </div>
         </button>
       </div>
-      <div class="roles-icon" style="margin-left: 32px;">
+      <div class="roles-icon fade-up-element" style="margin-left: 32px;">
         <div class="backdrop-blur-8" style="padding: 60px; background: rgba(219, 219, 219, 0.2); border-radius: 16px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" fill="none">
             <path
@@ -931,7 +960,7 @@
   <!-- footer -->
   <div class="relative w-full h-full">
     <footer
-      class="site-footer relative right-0 bottom-0 left-0 w-full bg-dark-blue pt-115 pb-45 lg:pb-50 -z-10 before:absolute before:right-0 before:left-0 before:bottom-full before:h-50 before:bg-sand"
+      class="site-footer relative right-0 bottom-0 left-0 w-full bg-dark-blue pt-115 pb-45 lg:pb-50 before:absolute before:right-0 before:left-0 before:bottom-full before:h-50 before:bg-sand"
       data-target="site-footer" style="font-family: bt-beausans, sans-serif; color: #ffffff;">
       <div class="container mb-40 lg:mb-115">
         <div class="grid grid-cols-12 gap-x-12 gap-y-60 lg:gap-y-90">
@@ -953,19 +982,19 @@
 
               <a href="/contact.html"
                 class="group inline-flex justify-between items-center gap-20 bg-dark-blue/10 text-15 leading-none tracking-1.5 py-10 pr-10 pl-35 rounded-60 overflow-hidden">
-                <span class="relative text-white z-10 transition-colors duration-200 group-hover:text-dark-blue">Liên
+                <span class="relative text-white transition-colors duration-200 group-hover:text-dark-blue">Liên
                   hệ</span>
-                <div
-                  class="flex justify-center items-center relative w-35 h-35 rounded-full [&_path]:stroke-dark-blue before:absolute before:size-full before:bg-white before:rounded-full before:transition-transform before:duration-500 group-hover:before:scale-[20] children:z-10">
-                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g id="Group 209">
-                      <path id="Line 35" d="M1 1L4.9264 4.9264" stroke="white" stroke-width="1.5"
-                        stroke-linecap="round" />
-                      <path id="Line 36" d="M1 8.71094L4.9264 4.78453" stroke="white" stroke-width="1.5"
-                        stroke-linecap="round" />
-                    </g>
-                  </svg>
-                </div>
+                  <div class="flex justify-center items-center relative w-35 h-35 rounded-full [&_path]:stroke-dark-blue 
+                                    before:absolute before:size-full before:bg-white before:rounded-full 
+                                    before:transition-transform before:duration-500 group-hover:before:scale-[20] 
+                                    before:z-0"> <svg width="6" height="10" viewBox="0 0 6 10" fill="none"
+                      xmlns="http://www.w3.org/2000/svg" class="relative">
+                      <g id="Group 209">
+                        <path id="Line 35" d="M1 1L4.9264 4.9264" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                        <path id="Line 36" d="M1 8.71094L4.9264 4.78453" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                      </g>
+                    </svg>
+                  </div>
               </a>
             </div>
           </div>
@@ -980,8 +1009,8 @@
                   class="group flex justify-between items-center text-24 lg:text-26 leading-none tracking-1.2 lg:tracking-1.3 uppercase py-12 border-b border-white">
                   <span class="transition-transform duration-300 group-hover:translate-x-15">Về chúng
                     tôi</span>
-                  <div
-                    class="flex justify-center items-center w-35 h-35 rounded-full bg-dark-blue/10 [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15">
+                  <div style="background:#ffffff"
+                    class="flex justify-center items-center w-35 h-35 rounded-full [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15">
                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g id="Group 209">
                         <path id="Line 35" d="M1 1L4.9264 4.9264" stroke="white" stroke-width="1.5"
@@ -996,8 +1025,8 @@
                   class="group flex justify-between items-center gap-20 text-24 lg:text-26 leading-none tracking-1.2 lg:tracking-1.3 uppercase py-12 border-b border-white">
                   <span class="transition-transform duration-300 group-hover:translate-x-15">Các dự
                     án</span>
-                  <div
-                    class="flex justify-center items-center w-35 h-35 rounded-full bg-dark-blue/10 [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15">
+                  <div style="background:#ffffff"
+                    class="flex justify-center items-center w-35 h-35 rounded-full [&_path]:stroke-dark-blue transition-transform duration-300 group-hover:-translate-x-15">
                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g id="Group 209">
                         <path id="Line 35" d="M1 1L4.9264 4.9264" stroke="white" stroke-width="1.5"
@@ -1033,8 +1062,6 @@
       </div>
     </footer>
   </div>
-
-  <div class="global-custom-cursor"></div>
 
   <script>
     const hero = document.getElementById('hero');
@@ -1143,8 +1170,38 @@
     updateContactButton();
     window.addEventListener('resize', updateContactButton);
 
-  </script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const elementsToAnimate = document.querySelectorAll('.fade-up-element');
 
+      const observerOptions = {
+        root: null, // viewport as the root
+        rootMargin: '0px',
+        threshold: 0.1 // Kích hoạt khi 10% phần tử hiển thị trong viewport
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Phần tử đã vào viewport
+            entry.target.classList.add('is-visible');
+            // Nếu bạn chỉ muốn animation chạy một lần, hãy unobserve nó
+            observer.unobserve(entry.target);
+          } else {
+            // Tùy chọn: Nếu bạn muốn animation lặp lại khi cuộn ra/vào
+            // entry.target.classList.remove('is-visible');
+          }
+        });
+      }, observerOptions);
+
+      // Bắt đầu quan sát từng phần tử
+      elementsToAnimate.forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script> AOS.init(); // Khởi tạo AOS </script>
 </body>
 
 </html>
