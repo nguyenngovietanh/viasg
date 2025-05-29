@@ -150,12 +150,10 @@
 
     #heroTitle {
       opacity: 1;
-      /* Hiển thị ban đầu */
     }
 
     #heroTitleSwap {
       opacity: 0;
-      /* Ẩn ban đầu */
     }
 
     .nav-container {
@@ -224,48 +222,31 @@
       top: 50%;
       left: 50%;
       width: 200px;
-      /* Kích thước tối đa của hình tròn khi scale(1) - đảm bảo đủ lớn để bao phủ nút */
       height: 200px;
-      /* Tương tự */
       background-color: #1a2026;
-      /* Màu nền mà bạn muốn khi hover (ví dụ: đen) */
       border-radius: 50%;
-      /* Để tạo hình tròn */
       transform: translate(-50%, -50%) scale(0);
-      /* Ban đầu ẩn và ở giữa nút, scale 0 */
       transition: transform 0.4s ease-out;
-      /* Chuyển động scale mượt mà */
       z-index: -1;
-      /* Đặt nó ĐẰNG SAU nội dung của nút và background mặc định */
     }
 
-    /* Thay đổi màu chữ và kích hoạt hiệu ứng scale khi hover vào .contact-btn */
     .contact-btn:hover {
       color: #ffffff;
-      /* Thay đổi màu chữ thành trắng */
-      /* background-color: rgba(255, 255, 255, 0.1); -- giữ nguyên background mặc định */
     }
 
     .contact-btn:hover::before {
       transform: translate(-50%, -50%) scale(1);
-      /* Phóng to ra để bao phủ nút */
     }
 
-    /* Đảm bảo nội dung (text, icon) luôn hiển thị trên hiệu ứng nền mới */
     .contact-btn a,
     .contact-btn .more-icon {
       position: relative;
-      /* Quan trọng để z-index có hiệu lực */
       z-index: 1;
-      /* Nằm trên pseudo-element ::before (có z-index: -1) */
       pointer-events: none;
-      /* Cho phép sự kiện click xuyên qua link */
       text-decoration: none;
       color: inherit;
-      /* Kế thừa màu từ .contact-btn */
     }
 
-    /* Thay đổi màu stroke và fill của icon khi hover */
     .contact-btn:hover .more-icon svg path {
       stroke: #ffffff;
       fill: #ffffff;
@@ -445,7 +426,6 @@
       background: rgb(255, 255, 255, 0.2);
       width: 80%;
       height: 400px;
-      /* z-index: 1; */
       backdrop-filter: blur(3px);
       border-radius: 20px;
       display: flex;
@@ -481,15 +461,12 @@
       color: #1a1a1a !important;
     }
 
-    /* Trạng thái ban đầu (ẩn, chưa animate) */
     .fade-up-element {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1s ease-out, transform 1s ease-out;
-      /* Dùng transition thay vì animation */
     }
 
-    /* Trạng thái khi animate (hiển thị, về vị trí gốc) */
     .fade-up-element.is-visible {
       opacity: 1;
       transform: translateY(0);
