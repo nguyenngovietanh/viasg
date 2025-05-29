@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/amaliproperties.com/wp-content/uploads/2024/04/favicon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/amaliproperties.com/wp-content/uploads/2024/04/favicon.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/amaliproperties.com/wp-content/uploads/2024/04/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/amaliproperties.com/wp-content/uploads/2024/04/logo-favicon.jpg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/amaliproperties.com/wp-content/uploads/2024/04/logo-favicon.jpg" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/amaliproperties.com/wp-content/uploads/2024/04/logo-favicon.jpg" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" id="gform_basic-css"
     href="/amaliproperties.com/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css?ver=2.8.18" type="text/css"
@@ -99,8 +99,8 @@
       min-height: 100%;
       width: auto;
       height: auto;
-      /* transform: translate(-50%, -50%);  */
       z-index: -1;
+      object-fit: cover;
     }
 
     .hero-overlay {
@@ -1157,6 +1157,11 @@
             </svg>
           </div>
       `;
+
+      contactButton.addEventListener('click', function () {
+          // Chuyển hướng đến file contact.html
+          window.location.href = 'contact.html';
+        });
 
     function updateContactButton() {
       if (window.innerWidth < 431) {
