@@ -993,10 +993,13 @@
 
       .leader-box-2 {
         margin-top: 40px !important;
+        flex-direction: column !important;
+
       }
 
       .leader-quotes {
-        display: none !important;
+        margin-left: 0 !important;
+        margin-top: 40px !important;
       }
 
       .leader-about {
@@ -1018,6 +1021,31 @@
 
       .span-contact {
         font-size: 16px !important;
+      }
+
+      .int-content {
+        padding: 0 !important;
+        letter-spacing: 0.4px !important;
+      }
+
+      .int-title {
+        padding: 0 !important;
+      }
+
+      .field-container {
+        padding: 132px 24px 60px 24px;
+      }
+
+      .vision-quotes div {
+        width: 100% !important;
+      }
+
+      .main-title h1 {
+        top: 250px !important;
+      }
+
+      .about-bg picture {
+        margin-top: 24px !important;
       }
     }
   </style>
@@ -1164,7 +1192,7 @@
     <div id="content-wrap">
       <main id="main" class="bg-dark-blue text-white rounded-b-40">
         <div class="w-full h-full relative overflow-hidden">
-          <section data-name="banner" class="relative w-screen h-dvh z-20">
+          <section data-name="banner" class="main-title relative w-screen h-dvh z-20">
             <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
               <video class="min-w-full min-h-screen w-[177.77777%] h-full absolute top-0 left-0 object-cover"
                 src="https://s3-figma-videos-production-sig.figma.com/video/1262758276879886351/ORG/b784/8f93/-a39f-4622-854b-1a4829e73776?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FPSvjKb-OTwXBivOffYs46iqQjgNy71UqdPEmK0PkxPF0SoVA-a~B2XdcXSo5GrTHfCTeAsLJupv40fec1a6pgEa234HWMkOSJhKlwV9ugaF022sPMbZMP2RoIIiGZhFk2hjBZ6Xxkr8GKU7tc8MZjukmNQSdIONvxuvDnYh0HU4lT3qj4M9Zu~yLguNk6CQWhbNXQZOgiJ4Zc9ez6DBP~4R2sc5HTaAE1eyxfEpl3Sqc0rFxwFx1VPaM7mIF7P7HW8BaS5W3kTxuUOmScOPxXW-cPVz5jH3ZCk1huCmc7Rs0rgHQ~mcp8Y~hU7PjLCmSyg2gGMnXX2lypXGIxuJYg__"
@@ -1188,14 +1216,14 @@
           <section data-name="intro" class="relative w-screen z-20" style="font-family: bt-beausans, sans-serif;">
             <div class="container">
               <div class="md:grid grid-cols-6 md:grid-cols-12">
-                <div class="col-span-7 col-start-2">
+                <div class="col-span-7 col-start-2 int-container">
                   <h2
-                    class="fade-up-element text-28 leading-32 md:text-52 md:leading-46 lg:text-68 font-light lg:leading-64 tracking-2.16 pr-20 md:pr-0 mb-10 md:mb-40 mt-60 lg:mt-180 lg:mr-105"
+                    class="fade-up-element int-title text-28 leading-32 md:text-52 md:leading-46 lg:text-68 font-light lg:leading-64 pr-20 md:pr-0 mb-10 md:mb-40 mt-60 lg:mt-180 lg:mr-105"
                     style="text-transform: uppercase; line-height: 130%;">
-                    Với hơn <br> một thập kỷ <br> kinh nghiệm
+                    Với hơn một thập kỷ kinh nghiệm
                   </h2>
                 </div>
-                <div class="col-span-6 pr-50 md:pr-0 md:col-start-6 min-[1650px]:pr-70">
+                <div class="int-content col-span-6 pr-50 md:pr-0 md:col-start-6 min-[1650px]:pr-70">
                   <p class="fade-up-element text-21 leading-26 md:leading-32 tracking-0.21 font-body mb-10">
                     Chúng tôi cung cấp cho bạn giải pháp đầu tư, xây dựng nhà ở, giáo dục, vật liệu xây dựng, nông
                     nghiệp xanh.
@@ -1216,7 +1244,7 @@
             </div>
 
             <div class="flex flex-col-reverse mt-15 md:mt-0 md:grid grid-cols-12 relative md:ml-100 z-10 md:-mb-100">
-              <div class="col-span-4 self-center -mt-70 pt-90 md:py-0 md:mt-200 z-20 xl:ml-40"
+              <div class="field-container col-span-4 self-center -mt-70 pt-90 md:py-0 md:mt-200 z-20 xl:ml-40"
                 style="font-family: bt-beausans, sans-serif;">
                 <h2 class="fade-up-element mb-10 uppercase font-light"
                   style="font-size: 32px; line-height: 120%; font-weight: bold;">
@@ -1236,7 +1264,7 @@
               </div>
               <div class="col-span-8 relative -mr-30 md:mt-200 z-10 md:ml-100 md:translate-x-50">
                 <div
-                  class="aspect-[821/821] md:aspect-[821/944] xl:aspect-[821/680] w-full border-dark-blue border-[20px] relative border-t-transparent [border-start-start-radius:200px]">
+                  class="about-bg aspect-[821/821] md:aspect-[821/944] xl:aspect-[821/680] w-full border-dark-blue border-[20px] relative border-t-transparent [border-start-start-radius:200px]">
                   <picture loading="lazy" role="presentation"
                     class="absolute inset-0 w-full h-full object-cover children:absolute children:inset-0 children:w-full children:h-full children:object-cover">
                     <source type="image/webp" srcset="
@@ -1280,7 +1308,7 @@
                     <div
                       class="vision-quotes -mt-70 md:mt-200 z-20 border-r-[1px] border-brown lg:border-0 md:bg-white/40 md:backdrop-blur-20 md:absolute px-40 py-40 relative"
                       style="font-family: bt-beausans, sans-serif; max-width: 820px; width: 100%; height: 300px; margin-left: auto; margin-right: auto; border-radius: 12px;">
-                      <h2 class="fade-up-element text-28 md:leading-62 tracking-3.6 mb-16 uppercase font-light">
+                      <h2 class="fade-up-element text-28 md:leading-62 mb-16 uppercase font-light">
                         Tầm nhìn & sứ mệnh
                       </h2>
                       <div class="flex flex-col gap-20 w-3/4 md:w-full">
@@ -1339,7 +1367,8 @@
                           fill="#C2A26A" />
                       </svg>
                     </div>
-                    <p class="py-8 fade-up-element" style="font-style: italic; font-size: 16px;">Trong suốt hơn 23 năm phát triển, VIASG
+                    <p class="py-8 fade-up-element" style="font-style: italic; font-size: 16px;">Trong suốt hơn 23 năm
+                      phát triển, VIASG
                       GROUP theo đuổi sự xuất sắc, đổi mới và phát triển bền vững. Hôm nay, chúng tôi
                       đã phát triển thành một tập đoàn đa ngành năng động với trụ sở chính tại thành phố Vinh, tỉnh Nghệ
                       An, Việt Nam. Bên
@@ -1474,7 +1503,8 @@
 
           <section class="">
             <div class="flex flex-col items-center justify-centerxl:grid grid-cols-12">
-              <h2 class="contact-more col-span-8 text-32 mb-25 md:mb-40 text-center font-light uppercase max-w-[900px] fade-up-element">
+              <h2
+                class="contact-more col-span-8 text-32 mb-25 md:mb-40 text-center font-light uppercase max-w-[900px] fade-up-element">
                 ĐỂ BIẾT THÊM THÔNG TIN VỀ VIASG VUI LÒNG LIÊN HỆ
               </h2>
               <div class="col-span-2 col-start-6 h-180 flex lg:block justify-center">
