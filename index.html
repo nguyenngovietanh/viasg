@@ -555,6 +555,29 @@
 
     @media (max-width: 430px) {
 
+      .news-container {
+        padding: 40px !important;
+      }
+
+      .news-zone {
+        flex-direction: column !important;
+      }
+
+      .news-box {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .news-zone-1 .news-box:last-child {
+        margin-top: 40px;
+      }
+
+      .news-zone-2 .news-box:nth-child(2) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+
       .nav-container:not(.open),
       .nav-container.open {
         right: 30px !important;
@@ -931,6 +954,70 @@
           </svg>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="relative w-full z-20">
+    <div class="section-main-mb flex justify-center">
+        <div class="news-container w-full max-w-5xl mx-auto px-4" style="padding: 80px; background: #1A2026;">
+                    <!-- Title -->
+                    <h2 class="text-lg font-semibold mb-4" style="color: #ffffff;">TIN TỨC SỰ KIỆN</h2>
+            
+                    <!-- Frist Grid -->
+                    <div class="news-zone news-zone-1 w-full flex flex-row" style="padding-top: 16px; margin-bottom: 20px;">
+                        <!-- Large News Card -->
+                        <div onclick="window.location.href='/news-details.html'" style="cursor: pointer; border-radius: 12px; width: 70%; margin-right: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/GPDT.jpg" alt="News Image" class="w-full object-cover" style="height: 240px;">
+                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
+                                <h3 class="text-xl font-semibold text-black">TOP CÁC KHU ĐÔ THỊ ĐÁNG MƠ ƯỚC TẠI VIỆT NAM</h3>
+                                <p class="text-sm text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Mollis amet massa sapien congue gravida ipsum magna. Magna viverra volutpat massa sapien congue gravida ipsum magna. Magna viverra volutpat amet massa sapien congue gravida ipsum magna...</p>
+                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">08:30 27/12/2024</p>
+                            </div>
+                        </div>
+            
+                        <!-- Small News Cards -->
+                        <div onclick="window.location.href='/news-details.html'" style="cursor: pointer; border-radius: 12px; width: 30%; margin-left: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/Architect-section.jpg" alt="News Image" class="w-full object-cover" style="height: 240px;">
+                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
+                                <h3 class="text-lg font-semibold text-black">TOP CÁC KHU ĐÔ THỊ</h3>
+                                <p class="text-sm text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Mollis amet massa sapien congue gravida ipsum magna...</p>
+                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">08:30 27/12/2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Grid -->
+                    <div class="news-zone news-zone-2 w-full flex flex-row" style="padding-top: 16px; margin-top: 20px;">
+                        <!-- Small News Cards -->
+                        <div onclick="window.location.href='/news-details.html'" style="cursor: pointer; border-radius: 12px; width: 33.33%; margin-right: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/CAM-4-CHILLOUT_DIA-2100x1805.png" alt="News Image" class="w-full object-cover" style="height: 240px;">
+                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
+                                <h3 class="text-lg font-semibold text-black">TOP CÁC KHU ĐÔ THỊ</h3>
+                                <p class="text-sm text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Mollis amet massa sapien congue gravida ipsum magna...</p>
+                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">08:30 27/12/2024</p>
+                            </div>
+                        </div>
+                        <!-- Small News Cards -->
+                        <div onclick="window.location.href='/news-details.html'" style="cursor: pointer; border-radius: 12px; width: 33.33%; margin-left: 20px; margin-right: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/Grande-Home-2-1.jpg.webp" alt="News Image" class="w-full object-cover" style="height: 240px;">
+                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
+                                <h3 class="text-lg font-semibold text-black">TOP CÁC KHU ĐÔ THỊ</h3>
+                                <p class="text-sm text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Mollis amet massa sapien congue gravida ipsum magna...</p>
+                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">08:30 27/12/2024</p>
+                            </div>
+                        </div>
+                        <!-- Small News Cards -->
+                        <div onclick="window.location.href='/news-details.html'" style="cursor: pointer; border-radius: 12px; width: 33.33%; margin-left: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/GF-Entrance-View-1-5.jpg" alt="News Image" class="w-full object-cover" style="height: 240px;">
+                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
+                                <h3 class="text-lg font-semibold text-black">TOP CÁC KHU ĐÔ THỊ</h3>
+                                <p class="text-sm text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur. Mollis amet massa sapien congue gravida ipsum magna...</p>
+                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">08:30 27/12/2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
   </section>
 
