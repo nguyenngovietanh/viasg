@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en-GB">
   <head>
+    <script>
+      const express = require('express');
+      const cors = require('cors');
+      const app = express();
+
+      app.use(cors()); // Cho phép tất cả origin truy cập
+      // hoặc giới hạn:
+      app.use(cors({
+        origin: 'https://viasg.vn'
+      }));
+
+      // Ví dụ route ảnh
+      app.get('/image.jpg', (req, res) => {
+        res.sendFile('/path/to/image.jpg');
+      });
+
+      app.listen(3000);
+
+    </script>
     <script
       id="Cookiebot"
       src="https://consent.cookiebot.com/uc.js"
@@ -127,9 +146,6 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- TEMP emoji favicon -->
-    <!-- <link rel="icon" href="https://fav.farm/🏝️" /> -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="pingback" href="https://amaliproperties.com/xmlrpc.php" />
 
@@ -138,18 +154,17 @@
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
 
-    <!-- This site is optimized with the Yoast SEO plugin v23.8 - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>VIASG Group - Tin tức sự kiện</title>
+    <title>Kỳ vọng các siêu dự án cơ sở hạ tầng giao thông có thể kéo tiêu thụ xi măng sôi động trở lại</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="canonical" href="#" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="About Amali - Amali Island" />
+    <meta property="og:title" content="" />
     <meta
       property="og:url"
       content="#"
     />
-    <meta property="og:site_name" content="Amali Island" />
+    <meta property="og:site_name" content="" />
     <meta
       property="article:modified_time"
       content="2024-06-11T06:00:13+00:00"
@@ -157,25 +172,6 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:label1" content="Estimated reading time" />
     <meta name="twitter:data1" content="5 minutes" />
-    <script>
-      const express = require('express');
-      const cors = require('cors');
-      const app = express();
-
-      app.use(cors()); // Cho phép tất cả origin truy cập
-      // hoặc giới hạn:
-      app.use(cors({
-        origin: 'https://viasg.vn'
-      }));
-
-      // Ví dụ route ảnh
-      app.get('/image.jpg', (req, res) => {
-        res.sendFile('/path/to/image.jpg');
-      });
-
-      app.listen(3000);
-
-    </script>
     <script type="application/ld+json" class="yoast-schema-graph">
       {
         "@context": "https://schema.org",
@@ -237,11 +233,9 @@
         ]
       }
     </script>
-    <!-- / Yoast SEO plugin. -->
 
     <link rel="dns-prefetch" href="//ajax.googleapis.com" />
     <script type="text/javascript">
-      /* <![CDATA[ */
       window._wpemojiSettings = {
         baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
         ext: ".png",
@@ -968,6 +962,13 @@
       .home #island[data-name="island-banner"] p.font-script {
         text-transform: capitalize;
       }
+
+      @font-face {
+      font-family: 'bt-beausans', sans-serif;
+      font-weight: 300;
+      src: url(/amaliproperties.com/wp-content/uploads/fonts/BT-BeauSans-Regular.ttf) format("woff");
+      }
+
       /* HOME - Content Popup */
       @media (min-width: 992px) and (max-width: 1366px) {
         .home #block-1.block,
@@ -1046,6 +1047,7 @@
   </head>
   <body
     class="page-template page-template-templates page-template-about page-template-templatesabout-php page page-id-483"
+    style="background-color: #dad0c1;"
     data-barba="wrapper"
   >
     <div
@@ -1172,15 +1174,13 @@
           class="pointer-events-auto"
           title="Amali Island"
         >
-          <!-- <h1 title="Amali Island"> -->
-          <!-- <img class="relative w-[190px] h-auto max-h-[70px] -left-8 " src="/assets/img/logos/" alt="Amali Island Logo" data-target="menu-logo" /> -->
+         
           <div
             class="relative w-[130px] sm:w-[190px] h-auto -left-4 sm:-left-8"
             data-target="logo-lottie"
             data-played="false"
             title="Amali Island"
           ></div>
-          <!-- </h1> -->
         </a>
       </div>
       <div
@@ -1229,77 +1229,75 @@
       data-target="default-transition-cover"
     ></div>
 
-    <div id="page-wrap" data-barba="container" style="background: #dad0c1;" data-barba-namespace="about.php">
+    <div id="page-wrap" data-barba="container" data-barba-namespace="about.php">
       <a class="skip-link sr-only" href="#content-wrap">Skip to content</a>
 
-      <div id="content-wrap" style="font-family: bt-beausans, sans-serif; font-weight: bold;">
+      <div id="content-wrap" style="font-family:  bt-beausans, sans-serif; font-weight: regular;">
         <main id="main" class="bg-dark-blue text-white rounded-b-40">
           <div class="w-full h-full relative overflow-hidden">
+            <section data-name="news" class="relative w-screen z-20">
+                <div class="w-full max-w-4xl mx-auto p-4" style="padding-top: 60px; padding-bottom: 40px;">
+                    <!-- Title Section -->
+                    <h2 class="text-lg font-semibold mb-2" style="opacity: 0.8;">TIN TỨC SỰ KIỆN</h2>
+                    <h1 class="text-2xl font-semibold mb-2">THÔNG BÁO CHÍNH THỨC TỪ TẬP ĐOÀN VIASG</h1>
+                    <p class="text-xs text-gray-500 mb-4">13:30 13/10/2025</p>
             
-          <section class="relative w-full z-20">
-              <div class="section-main-mb flex justify-center">
-                  <div class="news-container" style="padding-top: 140px; padding-bottom: 120px; width: 80%; background: #1A2026;">
-                    <!-- Title -->
-                    <h2 class="text-lg font-semibold mb-4" style="color: #ffffff;">TIN TỨC SỰ KIỆN</h2>
-            
-                    <!-- Frist Grid -->
-                    <div class="news-zone news-zone-1 w-full flex flex-row" style="padding-top: 16px; margin-bottom: 20px;">
-                        <!-- Large News Card -->
-                        <div onclick="window.location.href='/news/news-6.html'" style="cursor: pointer; border-radius: 12px; width: 70%; margin-right: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
-                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/thong-bao-chinh-thuc.jpg" alt="News Image" class="w-full object-cover" style="height: 400px;">
-                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
-                                <h3 class="text-xl font-semibold text-black" style="width: 100%; height: 24px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;">THÔNG BÁO CHÍNH THỨC TỪ TẬP ĐOÀN VIASG</h3>
-                                <p class="text-sm text-gray-600 mt-2" style="overflow: hidden; height: 60px; width: 100%; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;">Kính gửi Quý khách hàng, đối tác và các cơ quan truyền thông. Thời gian gần đây, xuất hiện một số thông tin sai lệch liên quan đến việc bán và nhận đặt cọc tại Dự án Nhà ở xã hội Khu đô thị Trống Đồng (phường Vĩnh Tân cũ). Tập đoàn VIASG xin khẳng định: Những thông tin trên hoàn toàn không đúng sự thật, không xuất phát từ Tập đoàn VIASG hay bất kỳ đơn vị thành viên nào thuộc Tập đoàn.</p>
-                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">13:30 13/10/2025</p>
-                            </div>
-                        </div>
-            
-                        <!-- Small News Cards -->
-                        <div onclick="window.location.href='/news/news-4.html'" style="cursor: pointer; border-radius: 12px; width: 30%; margin-left: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
-                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/Nhà máy Xi măng VIXITO Quảng Trị hướng tới Hành tinh Xây dựng Xanh.jpg" alt="News Image" class="w-full object-cover" style="height: 400px;">
-                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
-                                <h3 class="text-lg font-semibold text-black" style="width: 100%; height: 24px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;">Nhà máy Xi măng VIXITO Quảng Trị: hướng tới “Hành tinh Xây dựng Xanh”</h3>
-                                <p class="text-sm text-gray-600 mt-2" style="overflow: hidden; height: 60px; width: 100%; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;">Sáng ngày 19/08/2025, hòa cùng sự kiện khánh thành nhiều công trình trọng điểm của đất nước, Công ty Cổ phần Xi măng Công nghệ cao VIXITO đã tổ chức lễ vận hành và xuất sản phẩm tại nhà máy VIXITO có địa chỉ tại thôn Đông Phúc, xã Tân Gianh, tỉnh Quảng Trị.</p>
-                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">08:30 23/08/2025</p>
-                            </div>
+                    <!-- Main Image and Content -->
+                    <div class="rounded-lg overflow-hidden mb-6">
+                        <img src="/amaliproperties.com/wp-content/uploads/2024/04/thong-bao-chinh-thuc.jpg" alt="Main News Image" class="w-auto object-cover rounded-lg" style="height: 800px; margin-left: auto; margin-right: auto;">
+                        <div class="py-6">
+                            <p class="text-whitetext-base leading-relaxed">
+                                Kính gửi Quý khách hàng, đối tác và các cơ quan truyền thông,
+                                <br> <br>
+                                Thời gian gần đây, xuất hiện một số thông tin sai lệch liên quan đến việc bán và nhận đặt cọc tại Dự án Nhà ở xã hội Khu đô thị Trống Đồng (phường Vĩnh Tân cũ).
+                                <br> <br>
+                                Tập đoàn VIASG xin khẳng định: <br>
+                                Những thông tin trên hoàn toàn không đúng sự thật, không xuất phát từ Tập đoàn VIASG hay bất kỳ đơn vị thành viên nào thuộc Tập đoàn.
+                                <br> <br>
+                                Tập đoàn không ủy quyền, không cho phép bất kỳ cá nhân, tổ chức nào thu tiền, nhận hồ sơ đăng ký, đặt cọc, giữ chỗ, hay thực hiện các giao dịch liên quan đến dự án nói trên. <br>
+                                Mọi hành vi lợi dụng danh nghĩa VIASG để thực hiện các hoạt động này đều là giả mạo, vi phạm pháp luật.
+                                <br> <br>
+                                VIASG cam kết tuân thủ nghiêm ngặt các quy định của pháp luật trong mọi hoạt động kinh doanh và phát triển dự án.
+                                <br> <br>
+                                Chúng tôi đề nghị Quý khách hàng cảnh giác, xác minh thông tin chính thống qua các kênh truyền thông và văn bản chính thức của Tập đoàn VIASG.
+                                <br> <br>
+                                Xin chân thành cảm ơn Quý khách hàng đã tin tưởng và đồng hành cùng VIASG. 
+                                <br> <br>
+                                <b>TẬP ĐOÀN VIASG</b>
+                              </p>
                         </div>
                     </div>
-
-                    <!-- Last Grid -->
-                    <div class="news-zone news-zone-2 w-full flex flex-row" style="padding-top: 16px; margin-top: 20px;">
-                        <!-- Small News Cards -->
-                        <div onclick="window.location.href='/news/news-2.html'" style="cursor: pointer; border-radius: 12px; width: 33.33%; margin-right: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
-                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/VIASG chính thức khởi động Dự án Khu đô thị VELAPORT tại thành phố Vinh.jpg" alt="News Image" class="w-full object-cover" style="height: 240px;">
-                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
-                                <h3 class="text-lg font-semibold text-black" style="width: 100%; height: 24px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;">VIASG chính thức khởi động Dự án Khu đô thị VELAPORT tại thành phố Vinh</h3>
-                                <p class="text-sm text-gray-600 mt-2" style="overflow: hidden; height: 60px; width: 100%; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;">Sáng 10/06/2025, tại thành phố Vinh, Công ty Cổ phần tập đoàn VIASG - chính thức khởi động dự án Khu đô thị VELAPORT.</p>
-                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">19:00 11/06/2025</p>
-                            </div>
-                        </div>
-
-                        <!-- Small News Cards -->
-                        <div onclick="window.location.href='/news/news-1.html'" style="cursor: pointer; border-radius: 12px; width: 33.33%; margin-right: 20px; margin-left: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
-                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/Ra mắt Khu đô thị sinh thái ven sông Athena.jpg" alt="News Image" class="w-full object-cover" style="height: 240px;">
-                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
-                                <h3 class="text-lg font-semibold text-black" style="width: 100%; height: 24px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;">Ra mắt Khu đô thị sinh thái ven sông Athena</h3>
-                                <p class="text-sm text-gray-600 mt-2" style="overflow: hidden; height: 60px; width: 100%; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;">Sáng 15/3, tại thành phố Vinh, chủ đầu tư dự án Khu đô thị Athena tổ chức lễ công bố bảng hàng và ra mắt Khu đô thị Athena.</p>
-                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">13:12 15/03/2025</p>
-                            </div>
-                        </div>
-
-                        <!-- Small News Cards -->
-                        <div onclick="window.location.href='/news/news-3.html'" style="cursor: pointer; border-radius: 12px; width: 33.33%; margin-left: 20px;" class="news-box rounded-lg shadow overflow-hidden fade-up-element">
-                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/Xi măng Vixito Xây Nhà Yêu Thương tại Huyện Nghi Lộc, Tỉnh Nghệ An.png" alt="News Image" class="w-full object-cover" style="height: 240px;">
-                            <div class="p-4" style="background: #d2c2ad; padding: 20px;">
-                                <h3 class="text-lg font-semibold text-black" style="width: 100%; height: 24px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1;">Xi măng Vixito Xây Nhà Yêu Thương tại Huyện Nghi Lộc, Tỉnh Nghệ An</h3>
-                                <p class="text-sm text-gray-600 mt-2" style="overflow: hidden; height: 60px; width: 100%; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;">Với tinh thần “trách nhiệm vì cộng đồng” và mong muốn mang lại cuộc sống tốt đẹp hơn cho người dân khó khăn, xi măng Vixito đã thực hiện chương trình xây nhà yêu thương tại huyện Nghi Lộc, tỉnh Nghệ An. Đây là một trong những hoạt động từ thiện ý nghĩa của Vixito nhằm hỗ trợ những gia đình gặp khó khăn về nhà ở, tạo nên mái ấm ổn định và an toàn.</p>
-                                <p class="text-xs text-gray-500 mt-4" style="padding-top: 8px; font-weight: 600; font-style: italic; color: #525252;">08:30 01/11/2024</p>
+            
+                    <!-- Related Articles Section -->
+                    <h3 class="text-lg font-semibold" style="margin-bottom: 8px;">BÀI VIẾT TƯƠNG TỰ</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <!-- Related Article Card -->
+                         <div class="bg-white rounded-lg shadow overflow-hidden" onclick="window.location.href='/news/news-2.html'" style="cursor: pointer;">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/VIASG chính thức khởi động Dự án Khu đô thị VELAPORT tại thành phố Vinh.jpg" alt="Related Article Image" class="w-full h-32 object-cover">
+                            <div class="p-4">
+                                <h4 class="text-md font-semibold text-dark-blue">VIASG chính thức khởi động Dự án Khu đô thị VELAPORT tại thành phố Vinh</h4>
+                                <p class="text-xs text-gray-500 mt-2">19:00 11/06/2025</p>
                             </div>
                         </div>
                         
+                        <div class="bg-white rounded-lg shadow overflow-hidden" onclick="window.location.href='/news/news-3.html'" style="cursor: pointer;">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/Xi măng Vixito Xây Nhà Yêu Thương tại Huyện Nghi Lộc, Tỉnh Nghệ An.png" alt="Related Article Image" class="w-full h-32 object-cover">
+                            <div class="p-4">
+                                <h4 class="text-md font-semibold text-dark-blue">Xi măng Vixito Xây Nhà Yêu Thương tại Huyện Nghi Lộc, Tỉnh Nghệ An</h4>
+                                <p class="text-xs text-gray-500 mt-2">19:30 01/11/2024</p>
+                            </div>
+                        </div>
+            
+                        <div class="bg-white rounded-lg shadow overflow-hidden" onclick="window.location.href='/news/news-5.html'" style="cursor: pointer;">
+                            <img src="/amaliproperties.com/wp-content/uploads/2024/04/Báo Nghệ An và Công ty cổ phần Xi măng công nghệ cao Vixito trao tặng 70 tấn xi măng cho huyện Con Cuông.jpg" alt="Related Article Image" class="w-full h-32 object-cover">
+                            <div class="p-4">
+                                <h4 class="text-md font-semibold text-dark-blue" style="overflow: hidden; height: 72px; width: 100%; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3;">Báo Nghệ An và Công ty cổ phần Xi măng công nghệ cao Vixito trao tặng 70 tấn xi măng cho huyện Con Cuông</h4>
+                                <p class="text-xs text-gray-500 mt-2">08:30 10/11/2023</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
+            
             </section>
 
           </div>
@@ -1311,7 +1309,7 @@
         <footer
           class="site-footer absolute right-0 bottom-0 left-0 w-full bg-sand text-dark-blue pt-115 pb-45 lg:pb-50 -z-10 before:absolute before:right-0 before:left-0 before:bottom-full before:h-50 before:bg-sand"
           data-target="site-footer"
-          style="font-family: bt-beausans, sans-serif;"
+          style="font-family:  bt-beausans, sans-serif;"
         >
           <div class="container mb-40 lg:mb-115">
             <div class="grid grid-cols-12 gap-x-12 gap-y-60 lg:gap-y-90">
@@ -1332,7 +1330,7 @@
               </div>
               <div class="col-span-12 lg:col-span-8">
                 <div
-                  class="relative h-full lg:pl-50 lg:pr-20"
+                  class="relative h-full lg:pl-50 lg:pr-20 after:hidden after:lg:block after:absolute after:bottom-0 after:left-50 after:w-3/4 after:h-1 after:bg-white/10"
                 >
                   <p
                     class="font-sans font-light text-30 leading-none tracking-2.1 lg:tracking-2.7 uppercase mb-[23px]"
@@ -1468,7 +1466,6 @@
               </div>
             </div>
           </div>
-          <div class="footer-divier bg-dark-blue" style="width: 91%; height: 1px; margin-left: auto; margin-right: auto; margin-bottom: 32px;"></div>
           <div
             class="copyright px-30 lg:px-60 pt-35 lg:pt-0 border-t border-white/20 lg:border-t-0"
           >
